@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Prices.cs" />
     <Compile Include="DeskQuote.cs" />
     <Compile Include="Desk.cs" />
     <Compile Include="SearchQuotes.cs">

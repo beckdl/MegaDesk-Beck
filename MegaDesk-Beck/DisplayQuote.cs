@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MegaDesk_Beck
 {
@@ -23,5 +24,23 @@ namespace MegaDesk_Beck
 
             addQuote.Show();
         }
+
+        private void DisplayQuote_Activated(object sender, EventArgs e)
+        {
+            //Load in data and get quote
+
+            Width.Text = AddQuote.userWidth.ToString();
+            Depth.Text = AddQuote.userDepth.ToString();
+            Drawers.Text = AddQuote.userDrawers.ToString();
+            Material.Text = AddQuote.userMaterial.ToString();
+            RushDays.Text = AddQuote.userRushOrderDays.ToString();
+            UserDate.Text = AddQuote.userDate.ToString();
+            Header.Text += AddQuote.userCustomerName.ToString();
+
+            SubtotalAmount.Text = "";
+            SubtotalAmount.Text += AddQuote.price.ToString();
+        }
+
+        
     }
 }
